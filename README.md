@@ -3,7 +3,7 @@
 
 This API supported Screenshotlayer standard REST API that accepts/returns JSON requests. Here is the [API reference] (https://screenshotlayer.com/documentation)
 
-You can find [examples of JavaScript](https://github.com/vijaypatoliya/screenshotlayer-node/tree/master/examples). This will help you for faster implementation of Screenshotlayer APIs.
+You can find [examples of JavaScript and TypeScript](https://github.com/vijaypatoliya/screenshotlayer-node/tree/master/examples). This will help you for faster implementation of Screenshotlayer APIs.
 
 ##### It does supports EcmaScript 5, EcmaScript 6,  EcmaScript 8, TypeScript, async-await, Promises, Callback!!!
 ##### It does also supports for AWS Lambda like serverless cloud function call.
@@ -29,6 +29,54 @@ export SSLAYER_CLIENT_ACCESS_KEY=API_ACCESS_KEY
 var screenshotlayer = require('screenshotlayer-node')('YOUR_ACCESS_KEY');
 ```
 
+## Configuration Using TypeScript
+```js
+import * as ScreenShotLayerAPI from 'screenshotlayer-node';
+const sslayer = new ScreenShotLayerAPI();
+sslayer.setApiKey('YOUR_ACCESS_KEY');
+```
+
+## Test Cases
+```bash
+npm run test.mocha
+```
+
+## Debugging
+```bash
+export DEBUG=sslayer:*
+```
+
 ```
 Originally by [Vijay Patoliya](https://github.com/vijaypatoliya) (osi.vijay@gmail.com).
+```
+ 
+## Example
+
+#### Capture a snapshot
+```javascript
+  sslayer.setApiKey(clientAccessKey);
+  var data = {
+    url: 'https://www.google.com'
+  };
+  try {
+    var response = sslayer.application.captureSnapshot(data);
+  } catch (error) {
+    return;
+  }
+```
+
+**following code define how to save image file using above response data**
+```javascript
+  var pathToSave = 'path/to/save';
+  var imageName = 'image';
+  var extension = response.imageType;
+  var fileName = pathToSave + '/' + imageName + '.' + extension;
+  var wstream = fs.createWriteStream(fileName);
+  var bufferString = Buffer.from(JSON.parse(response.imageBufferData).data);
+  wstream.write(bufferString);
+  wstream.on('error', (err) => {
+    console.log(err);
+    wstream.end();
+  });
+  console.log('created image: ', fileName);
 ```
