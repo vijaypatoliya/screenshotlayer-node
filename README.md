@@ -1,23 +1,42 @@
 # screenshotlayer-node (Screenshotlayer Node Rest API)
 [![Build Status](https://travis-ci.org/vijaypatoliya/screenshotlayer-node.svg?branch=master)](https://travis-ci.org/vijaypatoliya/screenshotlayer-node) [![Stackoverflow Thread](https://img.shields.io/badge/stackoverflow-screenshotlayer--node--api-yellowgreen.svg)](https://stackoverflow.com/search?q=nodejs-screenshotlayer-node)
 
-This API supported Screenshotlayer standard REST API that accepts/returns JSON requests. Here is the [API reference] (https://screenshotlayer.com/documentation)
+This API supported Screenshotlayer standard REST API that accepts/returns JSON requests. Here is the [API reference](https://screenshotlayer.com/documentation)
 
 You can find [examples of JavaScript and TypeScript](https://github.com/vijaypatoliya/screenshotlayer-node/tree/master/examples). This will help you for faster implementation of Screenshotlayer APIs.
 
 ##### It does supports EcmaScript 5, EcmaScript 6,  EcmaScript 8, TypeScript, async-await, Promises, Callback!!!
+
 ##### It does also supports for AWS Lambda like serverless cloud function call.
+
 ##### It supports pure JSON response.
+
 ##### A method support Promise and Callback both.
 
+##### Please Feel free to create issue for any help!
+
+##### All developers/contributors are requested to open Pull Request/Merge Request on develop branch. 
+
+##### Please make sure Test Cases be passed. 
+
 ## Get started
+
 Using the Screenshotlayer API wrapper for Node.js is really simple.
+
 Given that you already have a Node.js project with NPM setup just follow these steps:
 
-**Install the dependency**
+## Installation
+```bash
+npm install screenshotlayer-node --save
 ```
-npm install --save screenshotlayer-node
-```
+
+## Pull Request
+- Contributors can send their Pull Request to `develop` branch.
+- Kindly validate test cases & linting before opening new PR.
+
+## Do you need an expert?
+Are you finding a developer or team for your world-class enterprise product development? If yes, please send email to. Submit your project request [here](mailto:osi.vijay@gmail.com). Originally by [Vijay Patoliya](https://github.com/vijaypatoliya).
+
 
 ## Configuration Using JavaScript
 
@@ -36,19 +55,9 @@ const sslayer = new ScreenShotLayerAPI();
 sslayer.setApiKey('YOUR_ACCESS_KEY');
 ```
 
-## Test Cases
-```bash
-npm run test.mocha
-```
 
-## Debugging
-```bash
-export DEBUG=sslayer:*
-```
-
-```
 Originally by [Vijay Patoliya](https://github.com/vijaypatoliya) (osi.vijay@gmail.com).
-```
+
  
 ## Example
 
