@@ -1,5 +1,5 @@
 # screenshotlayer-node (Screenshotlayer Node Rest API)
-[![Build Status](https://travis-ci.org/vijaypatoliya/screenshotlayer-node.svg?branch=master)](https://travis-ci.org/vijaypatoliya/screenshotlayer-node) [![Stackoverflow Thread](https://img.shields.io/badge/stackoverflow-screenshotlayer--node--api-yellowgreen.svg)](https://stackoverflow.com/search?q=nodejs-screenshotlayer-node)
+[![Stackoverflow Thread](https://img.shields.io/badge/stackoverflow-screenshotlayer--node--api-yellowgreen.svg)](https://stackoverflow.com/search?q=nodejs-screenshotlayer-node)
 
 This API supported Screenshotlayer standard REST API that accepts/returns JSON requests. Here is the [API reference](https://screenshotlayer.com/documentation)
 
